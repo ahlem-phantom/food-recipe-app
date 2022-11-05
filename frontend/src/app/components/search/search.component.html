@@ -1,0 +1,102 @@
+
+  
+ <app-navbar></app-navbar>
+  
+  
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Search Results</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+   
+    
+
+  
+  <!-- Product Start -->
+  <div class="container-xxl py-5">
+     <div class="container">
+         <div class="row g-0 gx-5 align-items-end">
+             <div class="col-lg-6">
+                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                     <h1><span class="text-secondary">{{nb}} recipe: </span>{{par}}</h1>
+                 </div>
+             </div>
+             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                     <li class="nav-item me-2">
+                         <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Vegetable</a>
+                     </li>
+                     <li class="nav-item me-2">
+                         <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Fruits </a>
+                     </li>
+                     <li class="nav-item me-0">
+                         <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Fresh</a>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         <div class="tab-content">
+             <div id="tab-1" class="tab-pane fade show p-0 active">
+                 <div class="row g-4">              
+ 
+                     <div *ngFor="let r of recipes | paginate: { itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index"  class="container-res">
+                         <div class="position-relative bg-light overflow-hidden">
+                             <img class="w-auto" src="{{r.url}}" alt="">
+                         </div>
+                         <div class="container__text">
+                             <span class="text-primary me-1">SAUCES</span>
+                          <h1 class="text-secondary d-block h2 mb-2">{{r.recipe_name}}</h1>
+                          <p class="container__text__star">
+                            <!-- 1 star  -->
+                            <i [class]="(r.rating == 0) ? 'far fa-star fa-sm text-primary' : (r.rating > 0 && r.rating  < 1) ? 'fas fa-star-half-alt fa-sm text-primary' : 'fas fa-star fa-sm text-primary'"></i>
+                  
+                            <!-- 2 star  -->
+                            <i [class]="(r.rating  > 1 && r.rating  < 2) ? 'fas fa-star-half-alt fa-sm text-primary' : (r.rating  >= 2) ? 'fas fa-star fa-sm text-primary' : 'far fa-star fa-sm text-primary'"></i>
+                  
+                            <!-- 3 star  -->
+                            <i [class]="(r.rating  > 2 && r.rating < 3) ? 'fas fa-star-half-alt fa-sm text-primary' : (r.rating  >= 3) ? 'fas fa-star fa-sm text-primary' : 'far fa-star fa-sm text-primary'"></i>
+                  
+                            <!-- 4 star  -->
+                            <i [class]="(r.rating > 3 && r.rating  < 4) ? 'fas fa-star-half-alt fa-sm text-primary' : (r.rating >= 4) ? 'fas fa-star fa-sm text-primary' : 'far fa-star fa-sm text-primary'"></i>
+                  
+                            <!-- 5 star  -->
+                            <i [class]="(r.rating > 4 && r.rating  < 5) ? 'fas fa-star-half-alt fa-sm text-primary' : (r.rating  >= 5) ? 'fas fa-star fa-sm text-primary' : 'far fa-star fa-sm text-primary'"></i>
+                          </p>
+                          <p>
+                          {{r.description}}
+                          </p>
+                          <div class="container__text__timing">
+                           <div class="container__text__timing_time">
+                            <span class="fa fa-clock checked"> {{ r.totTime}}</span>
+                           </div>
+                           <div class="container__text__timing_time">
+                             <span class="fa fa-user"> {{r.servings}}</span>
+                           </div>
+                           <div class="container__text__timing_time">
+                             <span class="fa fa-bread-slice"> Medium</span>
+                           </div>
+                          </div>
+                          <button class="btn-res" [routerLink]="['/recipes',r.recipe_name]"> view recipe <i class="fa fa-arrow-right"></i></button>
+                         </div>
+                        </div>
+                        <br/><br/>
+                       
+                           <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onListDataChange($event)">
+                        </pagination-controls>
+                 </div>
+             </div>
+ 
+         </div>
+     </div>
+ </div>
+ <!-- Product End -->
+ 
+ 
+     
+   
+   <app-footer></app-footer>
+     <!-- Back to Top -->
+     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+   

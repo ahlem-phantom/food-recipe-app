@@ -1,0 +1,854 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ahlem/ontologies/2022/10/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/ahlem/ontologies/2022/10/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:recipe="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#authoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#authoredBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasAction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasDifficulty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasDifficulty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasIngredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasRating -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasRating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasStep -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasStep"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#withIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#withIngredient">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasStep"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasIngredient"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#cookTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#cookTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#prepTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#prepTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#servings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#servings">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#stepDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#stepDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#totalTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#totalTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#url">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Appetizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Appetizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Breakfast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Breakfast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Dessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Dinner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Dinner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Easy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Easy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Entree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Entree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FiveStars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FiveStars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FourStars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FourStars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#LiquidOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#LiquidOrigin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Lunch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Lunch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#OneStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#OneStar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#authoredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasDifficulty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficulty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasRating"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasStep"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#hasQuantity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#ThreeStars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#ThreeStars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#TwoStars -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#TwoStars">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Vegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Vegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Basil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Basil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Black_pepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Black_pepper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Eggs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Eggs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Extra_virgin_olive_oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Extra_virgin_olive_oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#LiquidOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Flour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Flour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Neapolitan_salami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Neapolitan_salami">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Nesrine_Sanefa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Nesrine_Sanefa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Pecorino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Pecorino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#AnimalOrigin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Pepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Pepper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Peter_Robinson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Peter_Robinson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FourStars"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Lunch"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Medium"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+        <recipe:authoredBy rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Roberto_Di_Pinto"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Black_pepper"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Eggs"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Extra_virgin_olive_oil"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Flour"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Neapolitan_salami"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Pecorino"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Salt"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Water"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fresh_brewer&apos;s_yeast"/>
+        <recipe:hasRating rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.2"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.1"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.2"/>
+        <recipe:cookTime>35 min</recipe:cookTime>
+        <recipe:description>He cooks together with Roberto Di Pinto the Neapolitan casatiello, is the leavened of the Neapolitan tradition to serve and share during the Easter period.</recipe:description>
+        <recipe:name>Neapolitan Casatiello</recipe:name>
+        <recipe:prepTime>40 min</recipe:prepTime>
+        <recipe:servings>8 persons</recipe:servings>
+        <recipe:totalTime>75 min</recipe:totalTime>
+        <recipe:url>https://www.giallozafferano.com/images/237-23704/Neapolitan-casatiello_360x300.jpg</recipe:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Easy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FiveStars"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Lunch"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+        <recipe:authoredBy rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Nesrine_Sanefa"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Salt"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#avocado"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#oil"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#pasta"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#tomates"/>
+        <recipe:hasRating rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#3.3"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.1"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.2"/>
+        <recipe:cookTime>30min</recipe:cookTime>
+        <recipe:description>Enjoy a meat-free pasta supper with one of our vegetarian pasta recipes – including classics like pesto pasta, lemon linguine and more…</recipe:description>
+        <recipe:name>pasta vegetarien</recipe:name>
+        <recipe:prepTime>20min</recipe:prepTime>
+        <recipe:servings>6 personnes</recipe:servings>
+        <recipe:totalTime>50min</recipe:totalTime>
+        <recipe:url>https://www.giallozafferano.com/images/226-22692/pasta-and-zucchini_360x300.jpg</recipe:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Breakfast"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Difficult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#TwoStars"/>
+        <recipe:authoredBy rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Santiago_Fernandes"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Eggs"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Flour"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#oil"/>
+        <recipe:hasRating rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.2"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.1"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.2"/>
+        <recipe:hasStep rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.3"/>
+        <recipe:cookTime>50min</recipe:cookTime>
+        <recipe:description>Découvrez cette recette facile de crêpes très rapide à préparer. Une recette simple qui, grâce à sa quantité d&apos;oeufs, ne nécessite aucun repos de la pâte. À préparer à la Chandeleur, pour un brunch ou à tout moment que l&apos;envie vous prend.</recipe:description>
+        <recipe:name>crepe</recipe:name>
+        <recipe:prepTime>30min</recipe:prepTime>
+        <recipe:servings>4 person</recipe:servings>
+        <recipe:totalTime>50min</recipe:totalTime>
+        <recipe:url>https://www.giallozafferano.com/images/227-22706/nutella-crepes_360x300.jpg</recipe:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Dinner"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#FiveStars"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Medium"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Recipe"/>
+        <recipe:authoredBy rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Peter_Robinson"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Basil"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Extra_virgin_olive_oil"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Flour"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Salt"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Water"/>
+        <recipe:hasIngredient rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#tomates"/>
+        <recipe:hasRating rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#5"/>
+        <recipe:cookTime>15min</recipe:cookTime>
+        <recipe:description>Although asking around they will tell you that there is only one original, the pizza margherita, and no other types of topping works.</recipe:description>
+        <recipe:name>Pizza Margherita</recipe:name>
+        <recipe:prepTime>30min</recipe:prepTime>
+        <recipe:servings>2 persons</recipe:servings>
+        <recipe:totalTime>45min</recipe:totalTime>
+        <recipe:url>https://www.giallozafferano.com/images/227-22719/pizza-margherita-tomato-and-mozzarella-pizza_360x300.jpg</recipe:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Roberto_Di_Pinto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Roberto_Di_Pinto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Salt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Salt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Santiago_Fernandes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Santiago_Fernandes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+        <recipe:stepDescription>Preheat the oven at 180 degree Celsius. Now, is the time to make the pizza base when the dough is ready. Dust the space a little using dry flour and take a large amount of the pizza dough. Using a rolling pin, roll this dough into a nice circular base. (Note: Make sure that the circular base is even at all ends.) Once you have made the base, use a fork and prick the base with it so that the base doesn&apos;t rise and gets baked nicely. Put it into the preheated oven and bake it 10 minutes. Now, your pizza base is ready.</recipe:stepDescription>
+        <recipe:title>Prepare the pizza base</recipe:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step1.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+        <recipe:stepDescription>Take a dough kneading plate and add all-purpose flour in it. Next, add salt and baking powder in it and sieve the flour once. Then, make a well in the centre and add 1 teaspoon of oil in it. On the other hand, take a little warm water and mix the yeast in it along with 1 teaspoon of sugar. Mix well and keep aside for 10-15 minutes. The yeast will rise in the meantime. Once the yeast has risen, add it to the flour knead the dough nicely using some water. Keep this dough aside for 4-6 years. Then knead the dough once again. Now, the pizza dough is ready.</recipe:stepDescription>
+        <recipe:title>Prepare the pizza dough</recipe:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step2.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+        <recipe:stepDescription>Take a dough kneading plate and add all-purpose flour in it. Next, add salt and baking powder in it and sieve the flour once. Then, make a well in the centre and add 1 teaspoon of oil in it. On the other hand, take a little warm water and mix the yeast in it along with 1 teaspoon of sugar. Mix well and keep aside for 10-15 minutes. The yeast will rise in the meantime. Once the yeast has risen, add it to the flour knead the dough nicely using some water. Keep this dough aside for 4-6 years. Then knead the dough once again. Now, the pizza dough is ready.</recipe:stepDescription>
+        <recipe:title>Prepare the pizza dough</recipe:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step3.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Step"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#LiquidOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#avocado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#avocado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#nesrine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#nesrine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#LiquidOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#pasta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#pasta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#tomates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#tomates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#VegetarienOrigin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#1.8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#2.6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#2.6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#3.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#3.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#4.8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fresh_brewer&apos;s_yeast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Fresh_brewer&apos;s_yeast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ahlem/ontologies/2022/10/recipe#Ingredient"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
